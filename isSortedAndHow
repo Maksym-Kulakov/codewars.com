@@ -1,0 +1,43 @@
+
+public class Kata9 {
+	public static String isSortedAndHow(int[] array) {
+		
+		String fin = "no";
+		int countup = 0;
+		int countdown = 0;
+
+		if(array.length == 1) {
+			fin = "no";
+		}else if(array.length == 0) {
+			fin = "no";
+		}else{
+			for(int i = 0; i < array.length - 1; i++) {
+				if (array[i] <= array[i+1]) {
+					countup++;
+				} 
+			if(countup == array.length - 1)	{
+				fin = "yes, ascending";
+			}
+		}
+			for(int i = 0; i < array.length - 1; i++) {
+				if (array[i] >= array[i+1]) {
+					countdown++;
+				} 
+			if(countdown == array.length - 1)	{
+				fin = "yes, descending";
+			}
+		}
+		}	
+		 
+	  
+	  return fin;
+		}
+	  
+	
+	public static void main(String[] args) {
+		
+		int [] arr = {-1, 0, 3, 7, 11, 11};
+		String p = Kata9.isSortedAndHow(arr);
+		System.out.println(p);
+	}
+}
