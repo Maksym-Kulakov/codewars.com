@@ -1,0 +1,34 @@
+
+public class Kata14 {
+
+	public static boolean isAllPossibilities(int[] arg) {
+		
+		boolean fin = false;
+	
+		if (arg.length == 0){
+			fin = false;
+		}else {
+		
+		int max = arg[0];
+		for (int i = 0; i < arg.length; i++) {
+			if(max < arg[i]) {
+				max = arg[i];
+			}
+		}
+		
+		
+		if ((arg.length - 1) >= max) {
+			fin = true;
+		}
+		
+		}	
+		
+    return fin;
+	}
+	
+	public static void main(String[] args) {
+		int [] some = {0};
+		System.out.println(Kata14.isAllPossibilities(some));
+	}
+
+}
