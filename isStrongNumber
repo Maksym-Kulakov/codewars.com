@@ -1,0 +1,72 @@
+
+public class Kata15 {
+    
+    public static String isStrongNumber(int num) {
+        
+    	String fin = null;
+    	String yes = "STRONG!!!!";
+    	String no = "Not Strong !!";
+    	
+    	String some = Integer.toString(num);
+    	char [] array = some.toCharArray();
+    	
+    	int count = 0;
+    	for (int i = 0; i < array.length; i++) {
+    		int fact = 1;
+    		for (int q = 1; q <= Character. getNumericValue(array[i]); q++) {
+    		fact = fact*q;	
+    		
+    		}
+    		count += fact;
+    	}
+    	
+    	
+    	if(count == num) {
+    		fin = yes;
+    	} else {
+    		fin = no;
+    	}
+    	
+    	
+    	return fin;
+    }
+
+    public static void main(String[] args) {
+
+    	int fact1 = 1;
+    	for (int d = 1; d <= 5; d++) {
+    	fact1 = fact1*d;
+    	}
+    	System.out.println(fact1);
+    	
+    	int n = 145;
+    	String some1 = Integer.toString(n);
+    	char [] array1 = some1.toCharArray();
+    	for(char x : array1) {
+    	int z = Character. getNumericValue(x);
+    	System.out.println(z);
+    	}
+    	
+    	int count = 0;
+    	for (int i = 0; i < array1.length; i++) {
+    		int fact = 1;
+    		for (int q = 1; q <= Character. getNumericValue(array1[i]); q++) {
+    		fact = fact*q;	
+    		System.out.println(fact);
+    		}
+    		count = count + fact;
+    		
+    	}
+    	System.out.println(count);
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+       System.out.println(Kata15.isStrongNumber(145));
+    	 
+	}
+    
+}
