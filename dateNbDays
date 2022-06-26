@@ -1,0 +1,43 @@
+import java.text.*;
+import java.util.*;
+
+public class Kita18 {
+    
+    public static void dateNbDays(double a0, double a, double p) {
+     
+    	String data = null;
+    	
+    	double qnty = 0;
+      
+    	double ttl = (a - a0);
+        
+    	double resyear = 0;
+    	
+    	int countyear = 0;
+    	
+    	while (a0 <= a) {
+    		
+    	resyear = (a0 * p / 100);
+    	
+    	a0 = a0 + resyear;
+    	
+    	countyear++;
+    	} 
+    	
+    	qnty = countyear*360 - ((a0 - a) * 360 / resyear);
+    	
+        
+    	System.out.println(a0);
+    	System.out.println(a0 - a);
+    	System.out.println(resyear);
+    	System.out.println(countyear * 360);
+    	System.out.println(qnty);
+    	
+//        return data;
+    }
+    
+    public static void main(String[] args) {
+		Kita18.dateNbDays(100, 101, 0.98);
+		
+	}
+}
