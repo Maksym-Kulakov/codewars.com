@@ -1,0 +1,45 @@
+import java.lang.StringBuilder;
+
+class Kata20{
+
+  static String toCamelCase(String s){
+   
+	   
+	  String[] zero = s.split("_");
+	  String[] one;
+	  
+	  if (zero.length < 2) {
+	     one = s.split("-");
+	  } else {
+		 one = s.split("_");
+	  }
+	  
+	  
+	  StringBuilder sb = new StringBuilder();
+	  
+	  for (int j = 1; j < one.length; j++) {
+		  one[j] = one[j].substring(0, 1).toUpperCase() + one[j].substring(1, one[j].length());
+	  }
+	  
+	  for(int i = 0; i < one.length; i++) {
+		  sb.append(one[i]);
+	  }
+	  
+	  String fin = sb.toString();
+	  
+	  
+	  
+	  return fin;
+  }
+  
+  public static void main(String[] args) {
+	String s1 = "the-stealth-warrior";
+	String s2 = "The_Stealth_Warrior";
+	
+	System.out.println(Kata20.toCamelCase(s1));
+	System.out.println(Kata20.toCamelCase(s2));
+	
+	
+  }
+  
+}
