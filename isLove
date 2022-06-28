@@ -1,0 +1,16 @@
+
+public class Kata24 {
+	public static boolean isLove(final int flower1, final int flower2) {
+        boolean res = false;
+        
+        if ((flower1%2 != 0 && flower2%2 == 0) || (flower2%2 != 0 && flower1%2 == 0)) {
+        	res = true;
+        }
+		
+		return res;
+	  }
+	
+	public static void main(String[] args) {
+		System.out.println(Kata24.isLove(1, 0));
+	}
+}
