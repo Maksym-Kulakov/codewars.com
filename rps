@@ -1,0 +1,22 @@
+
+public class Kata22 {
+	  public static String rps(String p1, String p2) {
+		    String s = "scissors";
+		    String p = "paper";
+		    String r = "rock";
+		    
+		    String res = "Draw!";
+		    
+		    if ((p1 == s &&  p2==p) || (p1 == p &&  p2==r) || (p1 == r &&  p2==s)) {
+		    	res = "Player 1 won!";
+		    } else if ((p2 == s &&  p1==p) || (p2 == p &&  p1==r) || (p2 == r &&  p1==s)) {
+		    	res = "Player 2 won!";
+		    }
+		    
+		    return res;
+	  }
+	  
+	  public static void main(String[] args) {
+		System.out.println(Kata22.rps("paper", "scissors"));
+	}
+}
