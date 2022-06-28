@@ -1,0 +1,54 @@
+
+public class Kata25 {
+	  public static int binToDecimal(String inp){
+		    
+		  int res;
+		  
+		  if (inp == null) {
+			  res = 0;
+		  } else if (inp.equals("") || inp.equals("0")) {
+			  res = 0;
+		  } else if (inp.equals("1")) {
+			  res = 1;
+		  } else {
+		  
+		  String inp2 = new StringBuilder(inp).reverse().toString();
+		  
+		  char [] array = inp2.toCharArray();
+		  
+		  int count = 0;
+		  if (array[0] == '1') {
+			  count += 1;
+			  }
+		  if (array[1] == '1') {
+			  count += 2;
+			  } 
+		  for (int i = 2; i < array.length; i++) {
+			  if (array[i] == '1') {
+				  int calc = 1;
+				  int temp = 1;
+			  while (temp <= i) {
+				  calc = calc*2;
+				  temp++;
+			  } 
+			  count += calc;
+			  }
+			  
+		  }
+		  
+		  res = count;
+		  }
+		  
+		  return res;
+		  }
+	  
+	  public static void main(String[] args) {
+ 
+		  
+		  
+	 	System.out.println(Kata25.binToDecimal("1001"));
+		
+		
+		
+	}
+}
