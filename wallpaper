@@ -1,0 +1,69 @@
+
+public class Kata29 {
+	  public String wallpaper(double l, double w, double h) {
+		  
+		  
+		  double s = 2 *(l + w) * h;
+		  double q = s / 5.2;
+		  double need = (15 * q / 100) + q;
+		  int result = (int)Math.ceil(need);
+		  
+		  String res;
+		  
+		  if (l <= 0 || w <= 0 || h <= 0) {
+			  res = "zero";
+		  } else {
+		  if (result == 1) {
+			  res = "one";
+		  } else if (result == 2) {
+			  res = "two";
+		  } else if (result == 3) {
+			  res = "three";
+		  } else if (result == 4) {
+			  res = "four";
+		  } else if (result == 5) {
+			  res = "five";
+		  } else if (result == 6) {
+			  res = "six";
+		  } else if (result == 7) {
+			  res = "seven";
+		  } else if (result == 8) {
+			  res = "eight";
+		  } else if (result == 9) {
+			  res = "nine";
+		  } else if (result == 10) {
+			  res = "ten";
+		  } else if (result == 11) {
+			  res = "eleven";
+		  } else if (result == 12) {
+			  res = "twelve";
+		  } else if (result == 13) {
+			  res = "thirteen";
+		  } else if (result == 14) {
+			  res = "fourteen";
+		  } else if (result == 15) {
+			  res = "fifteen";
+		  } else if (result == 16) {
+			  res = "sixteen";
+		  } else if (result == 17) {
+			  res = "seventeen";
+		  } else if (result == 18) {
+			  res = "eighteen";
+		  } else if (result == 19) {
+			  res = "nineteen";
+		  } else if (result == 20) {
+			  res = "twenty";
+		  } else {
+			  res = null;
+		  }
+		  }
+		  return res;
+		  }
+	  
+	  public static void main(String[] args) {
+		System.out.println(new Kata29().wallpaper(6.3, 4.5, 3.29));
+		
+		
+	}
+	  
+}
