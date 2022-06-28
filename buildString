@@ -1,0 +1,37 @@
+
+public class Kata23 {
+	 public static String buildString(String... args) {
+	
+	      String res;
+	      
+	      String[] array = args;
+	      StringBuilder sb = new StringBuilder();
+	      sb.append("I like ");
+	      if (args == null) {
+	    	  res = null;
+	      } else if (array.length == 1 && array[0].equals("")) {
+	    	  res = null;
+	      } else if (array.length == 1 && array[0].equals(" ") || array.length == 1 && array[0].equals("  ")) { 
+	    	  res = sb.toString();
+	      } else {  
+	      for(int i = 0; i < array.length; i++) {
+	    	  if (i != array.length - 1) {
+	    	  sb.append(array[i]);
+	    	  sb.append(", ");
+	    	  }else if (i == array.length - 1) {
+	    		  sb.append(array[i]);
+		    	  sb.append("!");
+	    	  }  
+	    	  
+	      }
+	      res = sb.toString();
+	      } 
+	      
+	      
+	      return res;
+	    }
+	 public static void main(String[] args) {
+		System.out.println(Kata23.buildString("  "));
+	}
+	 
+}
