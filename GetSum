@@ -1,0 +1,30 @@
+
+public class Kata30 {
+	  public int GetSum(int a, int b) {
+	      
+		  int res = 0;
+	      int i = a;
+	      int count = 0;
+	      
+	      if (b>a) {
+	    	  while (i <= b) {
+	    	      count += i;
+	    	      i++;
+	    	      } 
+	      } else {
+	    	  while (b <= i) {
+	    	      count += i;
+	    	      i--;
+	    	      }    	  
+	      }
+	    	      
+	      res = count;   
+	      
+	      return res;
+	     }
+
+	  	public static void main(String[] args) {
+			System.out.println(new Kata30().GetSum(0, -5));
+		}
+	  
+}
