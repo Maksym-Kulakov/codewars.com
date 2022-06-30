@@ -1,0 +1,23 @@
+
+public class Kata33 {
+	 public static String correct(String string) {
+		 
+			 String res1 = string.replace('5', 'S');
+		 
+			 String res2 = res1.replace ('0', 'O');	
+		 
+			 String res3 = res2.replace ('1', 'I');	 
+		 
+			 return res3;
+	 }
+	
+	 public static void main (String [] args) {
+		 System.out.println(Kata33.correct("ERNE5T HEM1NGWAY - F0R WH0M THE BELL T0LL5"));
+		 
+		 String some = "5";
+		 some.replace('5', 'S');
+		 System.out.println(some);
+	 }
+	 
+	 
+}
