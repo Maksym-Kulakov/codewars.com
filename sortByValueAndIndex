@@ -1,0 +1,60 @@
+
+public class Kata34 {
+	
+	public static int[] sortByValueAndIndex(int[] array) {
+	  
+		int[] array2 = new int[array.length];
+		
+		for (int i = 0; i < array.length; i++) {	 
+			array2[i] = array[i] * (i+1);		    
+		}
+		
+		int[] midarray = new int[array.length];		
+		for (int z = 0; z < array.length; z++ ) {
+			midarray[z] = array2[z];
+		}
+		
+		 
+		boolean isSorted = false;
+		int buf = 0;
+		
+		while(!isSorted) {
+			isSorted = true;
+			for (int i = 0; i < array2.length - 1; i++) {
+	            if (array2[i] > array2[i+1]) {
+	            	isSorted = false;
+	            	buf = array2[i];
+	            	array2[i] = array2[i+1];
+	            	array2[i+1] = buf;
+	            }
+			}	
+		}
+		
+		
+		int[] array3 = new int[array.length];
+		 
+		
+		for (int i = 0; i < array.length; i++) {
+			for(int y = 0; y < array.length; y++) {
+		         if(midarray[y] == array2[i]) {
+		        	 array3[i] = array2[i] / (y + 1);
+		         }	 
+			}
+		}
+		
+		
+		return array3;
+	  }
+	
+	public static void main(String[] args) {
+		
+		int[] x = {2, 1, 5, 3, 0, -1, 28};
+		int[] arrayres = Kata34.sortByValueAndIndex(x);
+		
+		for (int y : arrayres) {
+			System.out.println(y);
+	    }
+	
+   } 
+
+}
