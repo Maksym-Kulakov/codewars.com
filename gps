@@ -1,0 +1,39 @@
+
+public class Kata32 {
+	 public static int gps(int s, double[] x) {
+
+		 int res;
+		 
+		 if (x.length == 0 || x.length == 1) {
+			 res = 0;
+		 } else {
+			 double[] array = new double [x.length- 1];
+		 
+			 for (int i = 0; i < array.length; i++) {
+				 array[i] = (x[i + 1] - x[i]) * 3600 / s;  
+			 }
+		 
+			 double max = array[0];
+			 for (int i = 1; i < array.length; i++) {
+				 if (max < array[i]) {
+				 max = array[i];
+				 }
+			 }
+		 
+			 res = (int)Math.floor(max);
+		 	}
+		 
+		 return res;
+	     }
+	 
+	 
+	 
+	 public static void main (String [] args) {
+		 
+		 double [] x = {0, 1, 2};
+		 
+		 System.out.println(Kata32.gps(60, x));
+		 
+	 }
+	 
+}
