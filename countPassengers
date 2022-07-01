@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Kata41 {
+	
+	public static int countPassengers(ArrayList<int[]> stops) {
+		
+		int res = 0;
+
+		int count_in = 0;
+		int count_out = 0;
+		
+		for (int i = 0; i < stops.size(); i++) {
+			count_in += stops.get(i)[0];
+			count_out += stops.get(i)[1];	
+			
+			}
+		
+		res = count_in - count_out;
+		
+		return res;	
+	
+	}
+			
+
+	
+	public static void main(String[] args) {
+		
+		
+		
+		ArrayList <int[]> al = new ArrayList<>();
+		al.add(new int[] {10,0});
+		al.add(new int[] {3,5});
+		al.add(new int[] {2,5});
+		
+		System.out.println(Kata41.countPassengers(al));
+	 
+	}
+	
+}
