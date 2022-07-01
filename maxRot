@@ -1,0 +1,49 @@
+
+public class Kata40 {
+	
+	 public static long maxRot (long n) {
+	      
+	      String str = String.valueOf(n);
+	      
+	      char[] array = str.toCharArray();
+	      
+	      String[] array2 = new String [str.length()];
+	        
+	      int k = 0;
+	      
+	      for (int j = 0; j < array.length; j++) {
+	    	 
+	    	  char temp = array[j];
+	    	 
+		      for (int i = k; i < array.length - 1; i++) {
+		    	  array[i] = array[i+1];  
+		      }
+		      
+		      array[array.length - 1] = temp;
+		     
+		      array2[j] = new StringBuilder().append(array).toString(); 
+		      
+		      k++;
+		      
+	      }
+	      	
+	      long max = n;   
+	      
+	      for (int y = 0; y < str.length(); y++) {
+	    	  if (max < Long.parseLong(array2[y])) {
+	    		  max = Long.parseLong(array2[y]);
+	    	  }
+	      }
+	      
+		 return max;
+	    }
+	 
+	 public static void main(String[] args) {
+		
+		 long l = 69418307;
+		 System.out.println(Kata40.maxRot(l));
+		 
+		 
+	}
+	 
+}
