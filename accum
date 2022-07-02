@@ -1,0 +1,31 @@
+
+public class Kata43 {
+
+	  public static String accum(String s) {
+
+		String res = null;
+		
+		StringBuilder sb = new StringBuilder();
+		     
+		for (int i = 0; i < s.length(); i++) {
+			int t = 0;
+			sb.append(s.substring(i, i+1).toUpperCase());
+			while(t<i) {
+				sb.append(s.substring(i, i+1).toLowerCase());
+				t++;
+			}
+			sb.append("-");
+		}
+		
+		res = sb.toString().substring(0, sb.toString().length() - 1);
+		
+		return res;
+    }
+	
+	  public static void main(String[] args) {
+		System.out.println(Kata43.accum(""));
+		
+		
+	}
+	
+}
