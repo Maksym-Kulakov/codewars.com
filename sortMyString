@@ -1,0 +1,31 @@
+
+public class Kata44 {
+	public static String sortMyString(String s) {
+	    String res1 = null;
+	    String res2 = null;
+	    
+	    StringBuilder sb1 = new StringBuilder();
+	    StringBuilder sb2 = new StringBuilder();
+	    
+	    for(int i = 0; i < s.length(); i++) {
+	    	if(i == 0 || i % 2 ==0) {
+	    		sb1.append(s.substring(i, i+1));
+	    		} else {
+	    		sb2.append(s.substring(i, i+1));
+	    	}
+	    }
+	    
+	    res1 = sb1.toString();
+	    res2 = sb2.toString();
+		
+		
+		
+		return res1 + " " + res2;
+}
+	
+	public static void main(String[] args) {
+		System.out.println(Kata44.sortMyString(""));
+	}
+	
+	
+}
