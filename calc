@@ -1,0 +1,53 @@
+public class Kata45 {
+	public static String calc(String txt){
+		
+		StringBuilder sb = new StringBuilder();
+		String res = null;
+		int res2 = 0;
+		
+		String[] array = txt.split(" ");
+		if (txt.contains("+")) {
+			array = txt.split(" ");
+			res = sb.append(array[0] + array[2]).toString();  
+			} else if (txt.contains(" - ")) {
+			array = txt.split(" ");
+			res2 = array[0].length() - array[2].length();
+			int j = 0;
+			while (j < res2) {
+			sb.append(".");	
+			j++;
+			}
+			res = sb.toString();
+			} else if (txt.contains(" * ")) {
+				array = txt.split(" ");
+				res2 = array[0].length() * array[2].length();
+				int j = 0;
+				while (j < res2) {
+				sb.append(".");	
+				j++;
+				}
+				res = sb.toString();
+				} else if (txt.contains(" // ")) {
+					array = txt.split(" ");
+					res2 = array[0].length() / array[2].length();
+					int j = 0;
+					while (j < res2) {
+					sb.append(".");	
+					j++;
+					}
+					res = sb.toString();
+					}
+		
+	    return res;
+	}	
+	
+	public static void main(String[] args) {
+		 
+		System.out.println(Kata45.calc(".... // .."));
+		
+	 
+		 
+		
+	}
+	
+}
