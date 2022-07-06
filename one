@@ -1,0 +1,31 @@
+public class Kata49 {
+        public static String one() {
+            String l = "";
+            String str = "The quick brown fo";
+            StringBuilder sb = new StringBuilder();
+            String str2 = sb.append(str.replaceAll("\\s","")).toString().toLowerCase();
+            int count = 0;
+            int count1 = 0;
+            char chars[] = str2.toCharArray();
+            for (int i = 0; i < str2.length(); i++) {
+                for (int j = 0; j < str2.length(); j++) {
+                    if (chars[i] == chars[j]) {
+
+                        count++;
+                    }
+
+                }
+                if (count > 1) {
+                } else {
+                    l += str2.charAt(i);
+                    count = 0;
+                }
+            }
+            return l;
+        }
+
+        public static void main(String[] args) {
+            System.out.println(one());
+
+        }
+    }
