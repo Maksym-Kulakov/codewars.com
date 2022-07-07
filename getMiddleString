@@ -1,0 +1,28 @@
+public class Kata51 {
+	
+	public static String getMiddleString(String originalString) {
+		
+		String res = null;
+		
+		if (originalString.length()%2 == 0) {
+			res = originalString.substring(originalString.length()/2 - 1, originalString.length()/2 + 1);
+		} else if (originalString == "") {
+			res = "";
+		} else if (originalString.length() == 0) {
+			res = originalString;
+		} else {
+			res = originalString.substring(originalString.length()/2, originalString.length()/2 + 1);
+		}
+		
+		
+		
+		return res;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Kata51.getMiddleString("abcde"));
+	}
+
+
+}
+
