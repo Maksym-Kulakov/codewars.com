@@ -1,0 +1,25 @@
+
+public class Kata53 {
+	public static String[] markStringEnds(String originalString) {
+		
+		String [] res = new String[2];
+		
+		if (originalString == null || originalString == "") {
+			res[0] = "";
+			res[1] = "";
+		} else {
+			res[0] = originalString.substring(0, 1).toUpperCase() + originalString.substring(1); 
+			res[1] = originalString.substring(0, originalString.length() - 1) + originalString.substring(originalString.length() - 1).toUpperCase();
+		}
+		
+		return res;
+		
+}
+	
+	public static void main(String[] args) {
+		
+		
+		System.out.println((Kata53.markStringEnds("a")[0] + Kata53.markStringEnds("a")[1]));
+	}
+	
+}
