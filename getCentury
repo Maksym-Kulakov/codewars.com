@@ -1,0 +1,12 @@
+public class Kata61 {
+	public static int getCentury(int year) {
+	
+		return (year%100 == 0) ? year/100 : year/100 + 1;
+		
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Kata61.getCentury(1300));
+	}
+	
+}
