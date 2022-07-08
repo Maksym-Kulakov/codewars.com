@@ -1,0 +1,18 @@
+
+public class Kata55 {
+	  public static double getAverageSalary(double[] salaries) {
+		  double count = 0;
+		  for (double x : salaries) {
+			  count += x;
+		  }
+		  
+		  
+		  return count / salaries.length;
+	  }
+	  
+	  public static void main(String[] args) {
+		double [] ar = {};
+		System.out.println(Kata55.getAverageSalary(ar));
+	}
+	  
+}
