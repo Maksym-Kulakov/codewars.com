@@ -1,0 +1,33 @@
+
+public class Kata62 {
+	public static String replaceNth(String text, int n, char oldValue, char newValue) {
+		
+		char [] array = text.toCharArray();
+		char [] newarray = new char [text.length()];
+		int count = 1;
+		int index = 0; 
+		if (n > 0) {
+			for (char x : array) {
+				if (x == oldValue) {
+					newarray[index] = (count % n == 0) ? newValue : oldValue;
+					count++;
+					index++;
+				} else {
+					newarray[index] = x;
+					index++;
+				}
+			}
+		} else {
+			for (char x : array) {
+				newarray[index] = x;
+				index++;
+			}
+		}
+		
+		String res = new String(newarray);
+	    return res;
+	  }
+	public static void main(String[] args) {
+		System.out.println(Kata62.replaceNth("abcabcabcabcabcabc", 0, 'a', 'T'));
+	}
+}
