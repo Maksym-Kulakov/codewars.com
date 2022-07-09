@@ -1,0 +1,22 @@
+
+public class Kata70 {
+	public static String printerError(String s) {
+		String res;
+	//	boolean f = (s.matches("^[n-z]"));
+		int count = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.substring(i, i + 1).matches("[n-z]")) {
+				count++;
+		}
+	}
+		
+		return  String.valueOf(count) + "/" + s.length();
+		
+			
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(Kata70.printerError("amnz"));
+	}
+	
+}
