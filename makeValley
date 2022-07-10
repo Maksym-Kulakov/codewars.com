@@ -1,0 +1,64 @@
+public class Kata63 {
+	   public static int[] makeValley(int[] arr) {
+		   
+		   int[] zero = {};
+		 
+		   if (arr.length == 0) {
+			  return zero;
+			   
+		   } else if (arr.length == 1) {
+			   return arr;
+		   } else {
+			   
+		   int[] res = new int [arr.length];
+		   
+		   boolean sign = true;
+		   
+		   while (sign) {
+			   sign = false;
+			   for (int i = 0; i < arr.length - 1; i++) {
+				   int temp = 0;
+				   if (arr[i] < arr[i+1]) {
+					   temp = arr[i];
+					   arr[i] = arr[i+1];
+					   arr[i+1] = temp; 
+					   sign = true;
+				   }  
+			   }	   
+		   }
+		   
+		   res[arr.length / 2] = arr[arr.length - 1];
+		   res[0] = arr[0];
+		   res[arr.length - 1] = arr[1];
+		   
+		   int x = 2;
+		   for (int i = 1; i < arr.length / 2; i++) {
+			   res[i] = arr[x];
+			   x +=2;
+		   }
+		   
+		   int y = 3;
+		   for (int j = arr.length-2; j > arr.length / 2; j--) {
+			   res[j] = arr[y];
+			   y +=2;
+		   }
+		   
+		   
+		   return res;
+		   }
+	    } 
+	   
+	   public static void main(String[] args) {
+		   int inarr[] = {5};
+		   
+		   
+		   
+		   for(int x : Kata63.makeValley(inarr)) {
+			   System.out.println(x);
+		   }
+		   
+		
+	}
+	   
+}
+
