@@ -1,0 +1,22 @@
+public class Kata64 {
+  public int countSheeps(Boolean[] arrayOfSheeps) {
+    int count = 0; 
+		    if (arrayOfSheeps == null || arrayOfSheeps.length == 0) {  
+		    count = 0;  
+		    } else {
+		     for (Boolean x : arrayOfSheeps) {
+		        if (x != null && x != false) {
+		          count++;
+		        }
+		      }
+		    }
+		    return count;
+  }
+
+		
+	public static void main(String[] args) {
+		Boolean[] some = {false, true, true, null};
+		System.out.println(new Kata64().countSheeps(some)); 
+	}
+	
+}
